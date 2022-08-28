@@ -17,3 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/users','\App\Http\Controllers\UsersController@index');
+Route::get('/users/create','\App\Http\Controllers\UsersController@create');
