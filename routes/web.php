@@ -17,3 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/users','\App\Http\Controllers\UsersController@index');
+Route::get('/users/create','\App\Http\Controllers\UsersController@create');
+Route::post('/users/store','\App\Http\Controllers\UsersController@store');
+
+Route::get('/feeds/index','\App\Http\Controllers\FeedsController@index');
+Route::get('/feeds/create','\App\Http\Controllers\FeedsController@create');
+Route::post('/feeds/store','\App\Http\Controllers\FeedsController@store');
