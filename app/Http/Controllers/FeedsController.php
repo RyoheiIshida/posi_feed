@@ -20,7 +20,7 @@ class FeedsController extends Controller
     {
         $f=new Feed();
         $f->fill($req->except('_token')->save());
-        return redirect('save/create');
+        return redirect('feeds/create');
     }
     public function view()
     {
