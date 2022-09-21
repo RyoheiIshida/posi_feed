@@ -5,6 +5,7 @@
 <h2>Feed投稿</h2>
 
 <form method='POST' action='/feeds/store'>
+    @csrf
     <label id="posted_users_id">宛先：</label><br>
     <input id="posted_users_id" name="posted_users_id" type="text" size="32" value="{{old('posted_users_id')}}" />
 <br>
