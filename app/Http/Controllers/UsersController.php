@@ -16,10 +16,6 @@ class UsersController extends Controller
         $data = ['users' => User::find(10)];
         return view('users.index', $data);
     }
-    public function create()
-    {
-        return view('users.create');    
-    }
     public function store()
     {
         return redirect('users'); 
