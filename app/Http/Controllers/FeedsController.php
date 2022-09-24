@@ -16,7 +16,7 @@ class FeedsController extends Controller
     {
         return view('feeds.create');
     }
-    public function store(Reauqst $req)
+    public function store(Request $req)
     {
         $f=new Feed();
         $f->fill($req->except('_token')->save());
