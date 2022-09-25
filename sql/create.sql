@@ -12,5 +12,7 @@ create table feeds (
     created_users_id INT(32) NOT NULL,
     posted_users_id INT(32) NOT NULL,
     content text(140) NOT NULL,
-    private boolean not null DEFAULT true
+    private boolean not null DEFAULT true,
+    created_at datetime,
+    updated_at datetime
 );
