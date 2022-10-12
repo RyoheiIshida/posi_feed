@@ -18,7 +18,6 @@ class FeedsController extends Controller
     }
     public function store(Request $req)
     {
-#        dd($req->except('_token'));
         $f=new Feed();
         $f->fill($req->except('_token'))->save();
         return redirect('feeds/create');
