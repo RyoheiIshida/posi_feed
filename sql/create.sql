@@ -1,3 +1,6 @@
+create user 'ishida'@'localhost' identified by 'ryohei';
+create database 'posi_feed';
+
 drop table users;
 CREATE TABLE users (
     id INT(32) NOT NULL PRIMARY KEY AUTO_INCREMENT,
