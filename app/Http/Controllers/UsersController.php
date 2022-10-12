@@ -13,11 +13,13 @@ class UsersController extends Controller
     }
     public function index()
     {
-        $data = ['users' => User::find(10)];
+        $data = ['users' => User::all()];
         return view('users.index', $data);
     }
-    public function store()
+    public function store(Request $req)
     {
+        $u=new User();
+        $u->fill($req->except('_token'))->save();
         return redirect('users'); 
     }
     public function edit()
