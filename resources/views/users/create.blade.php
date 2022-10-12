@@ -9,7 +9,7 @@
     <input id='email' name='email' type='text' size='32' value='{{old("email")}}' />
     <br>
     <label id='password'>パスワード</label>
-    <input id='password' name='password' type='text' size='32' value='{{old("password")}}' />
+    <input id='password' name='password' type='password' size='32' value='{{old("password")}}' />
     <br>
     <label id='authority'>権限</label>
     <input id='authority' name='authority' type='text' size='32' value='{{old("authority")}}' />
