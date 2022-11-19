@@ -3,11 +3,15 @@
 @section('main')
 
 <h2>Feed投稿</h2>
-
 <form method='POST' action='/feeds/store'>
     @csrf
     <label id="posted_users_id">宛先：</label><br>
-    <input id="posted_users_id" name="posted_users_id" type="text" size="32" value="{{old('posted_users_id')}}" />
+    <select id="posted_users_id" name="posted_users_id" size="1">
+        @foreach($namelist as $name)
+        dump({{$name}})
+        <option>{{$name->name}}</option>
+        @endforeach
+    </select>
     <br>
     <label id="content">内容：</label><br>
     <textarea id="content" name="content" cols=40 rows=20 value="{{old('content')}}" ></textarea>
