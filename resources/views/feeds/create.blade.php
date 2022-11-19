@@ -21,7 +21,7 @@
     <label for="private">非公開</label>
     <br>
     <br>
-    <input id="created_users_id" name="created_users_id" type="hidden" value="1" />
+    <input id="created_users_id" name="created_users_id" type="hidden" value={{$Auth}} />
 
     <input type='submit'>
 

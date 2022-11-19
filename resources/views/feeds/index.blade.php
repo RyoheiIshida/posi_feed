@@ -4,7 +4,8 @@
 
 @foreach($feeds as $feed)
 
-<p>{{$feed->content}}</p>
+<p>{{$feed->content}}
+{{$feed->created_users_id}}</p>
 @endforeach
 
 @endsection

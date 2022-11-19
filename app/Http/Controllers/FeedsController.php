@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Feed;
+use Illuminate\Support\Facades\Auth;
 
 class FeedsController extends Controller
 {
@@ -14,7 +15,8 @@ class FeedsController extends Controller
     }
     public function create()
     {
-        return view('feeds.create');
+        $data=['Auth'=>Auth::id()];
+        return view('feeds.create',$data);
     }
     public function store(Request $req)
     {
