@@ -23,7 +23,9 @@ class FeedsController extends Controller
     public function store(Request $req)
     {
         $f=new Feed();
-        $f->fill($req->except('_token'))->save();
+        $f->fill($req->except(['_token','posted_users_id']));
+        $f->posted_userso_id=$req->posted_users_id();
+        $f->save();
         return redirect('feeds/create');
     }
     public function view()
