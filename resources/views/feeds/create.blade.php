@@ -8,7 +8,6 @@
     <label id="posted_users_id">宛先：</label><br>
     <select id="posted_users_id" name="posted_users_id" size="1">
         @foreach($namelist as $name)
-        dump({{$name}})
         <option>{{$name->name}}</option>
         @endforeach
     </select>
